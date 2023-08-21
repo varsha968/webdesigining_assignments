@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content button {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background-color: transparent;
+    }
+
+    .dropdown-content button:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <button>Menu</button>
+    <div class="dropdown-content">
+      <button onclick="navigate('Home')">Home</button>
+      <button onclick="navigate('About')">About</button>
+      <button onclick="navigate('Services')">Services</button>
+      <button onclick="navigate('Contact')">Contact</button>
+    </div>
+  </div>
+
+  <script>
+    function navigate(page) {
+      alert("Navigating to " + page);
+      // Add your navigation logic here
+    }
+  </script>
+</body>
+</html>
